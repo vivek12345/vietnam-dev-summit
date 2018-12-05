@@ -1,0 +1,30 @@
+.IndexPage h1 {
+  margin: 0;
+}
+
+.Restaurant {
+  cursor: pointer;
+  transition: transform 0.5s;
+  display: flex;
+  align-items: center;
+}
+
+.Restaurant .content {
+  flex: 1;
+}
+
+.Restaurant:hover {
+  background-color: #0d142f;
+}
+
+.Restaurant:not(.loading):hover::after {
+  content: "➜";
+}
+
+.Restaurant .title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.Restaurant.loading {
+  transform: scale(0.97);
+}
